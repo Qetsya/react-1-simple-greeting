@@ -26,10 +26,10 @@ const buttonStyle = {
 };
 
 const Page = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(false);
 
   const handleClick = () => {
-    setValue("Sveiki atvykę!");
+    setValue(true);
   };
 
   return (
@@ -47,7 +47,7 @@ const Page = () => {
         </button>
       </section>
       <section>
-        <span>{value}</span>
+        {value && <p>Sveiki atvykę!</p>}
       </section>
     </div>
   );
